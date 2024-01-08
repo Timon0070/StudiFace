@@ -1,0 +1,180 @@
+<html>
+  <head>
+    <style>
+      .main-container {
+        background-color: #fff;
+        display: flex;
+        padding-bottom: 50px;
+        flex-direction: column;
+      }
+      .header {
+        color: #fff;
+        white-space: nowrap;
+        background-color: #438bf8;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        padding: 55px 60px;
+        font: 400 64px Inter, sans-serif;
+        text-align: center;
+        cursor: pointer;
+      }
+      @media (max-width: 991px) {
+        .header {
+          font-size: 40px;
+          white-space: initial;
+          max-width: 100%;
+          padding: 0 20px;
+        }
+      }
+      .container {
+        border-radius: 20px;
+        background-color: #438bf8;
+        align-self: center;
+        display: flex;
+        width: 1268px;
+        max-width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 144px 0 143px;
+        padding: 50px 60px;
+      }
+      @media (max-width: 991px) {
+        .container {
+          margin: 40px 0;
+          padding: 0 20px;
+        }
+      }
+      .inner-container {
+        display: flex;
+        width: 1025px;
+        max-width: 100%;
+        flex-direction: column;
+        margin: 52px 0 55px;
+      }
+      @media (max-width: 991px) {
+        .inner-container {
+          margin: 40px 0;
+        }
+      }
+      .row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+      }
+      @media (max-width: 991px) {
+        .row {
+          max-width: 100%;
+          flex-wrap: wrap;
+        }
+      }
+      .title {
+        color: #fff;
+        flex-grow: 1;
+        flex-basis: auto;
+        margin: auto 0;
+        font: 400 40px Inter, sans-serif;
+        text-align: center;
+        
+      }
+      @media (max-width: 991px) {
+        .title {
+          max-width: 100%;
+        }
+      }
+      .button {
+        
+        white-space: nowrap;
+        border-radius: 20px;
+        background-color: #fff;
+        align-self: stretch;
+        justify-content: center;
+        align-items: center;
+        width: 50px; /* Die Hälfte von 100px */
+    	height: 50px; /* Die Hälfte von 100px */
+        padding: 12px 30px; /* Die Hälfte von 24px und 60px */
+        font: 400 40px Inter, sans-serif;
+        background-image: url("img/rechterPfeil.png"); /* Der Pfad zu deinem Pfeilbild */
+        background-size: contain; /* Damit das Bild die Größe des Knopfes anpasst */
+        background-repeat: no-repeat; /* Damit das Bild nicht wiederholt wird */
+        background-position: center; /* Damit das Bild zentriert wird */
+      }
+      @media (max-width: 991px) {
+        .button {
+          white-space: initial;
+          padding: 0 20px 0 22px;
+        }
+      }
+      .form-group {
+        display: flex;
+        margin-top: 42px;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+      }
+      @media (max-width: 991px) {
+        .form-group {
+          max-width: 100%;
+          flex-wrap: wrap;
+          margin-top: 40px;
+        }
+      }
+      .input-label {
+        color: #fff;
+        flex-grow: 1;
+        flex-basis: auto;
+        margin: auto 0;
+        font: 400 40px Inter, sans-serif;
+        text-align: center;
+      }
+      @media (max-width: 991px) {
+        .input-label {
+          max-width: 100%;
+        }
+      }
+      .input-field {
+        color: #000;
+        white-space: nowrap;
+        border-radius: 20px;
+        background-color: #fff;
+        align-self: stretch;
+        justify-content: center;
+        align-items: start;
+        padding: 24px 60px;
+        font: 400 40px Inter, sans-serif;
+      }
+      @media (max-width: 991px) {
+        .input-field {
+          white-space: initial;
+          padding: 0 20px 0 22px;
+        }
+      }
+    </style>
+  </head>
+  <script src="script.js"></script>
+  <body>
+    <div class="main-container">
+      <header class="header">
+        StudiFace
+      </header>
+      <div class="container">
+        <div class="inner-container">
+          <div class="row">
+            <div class="title">Erfasse neue Gesichter</div>
+            <a href="#" class="button" onclick="goToDatenErfassen()"></a>
+          </div>
+          <div class="row">
+            <div class="title">Lerne die Gesichter deiner Studenten</div>
+            <a href="#" class="button" onclick="goToVokabeltrainer()"></a>
+          </div>
+          <div class="row">
+            <div class="title">Fordere Dich selbst im Quiz heraus</div>
+            <a href="#" class="button" onclick="goToQuiz()"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

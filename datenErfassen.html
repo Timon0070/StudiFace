@@ -1,0 +1,138 @@
+<form action="upload.php" method="post" enctype="multipart/form-data">
+  <div class="div">
+    <div class="div">
+      <!-- Überschrift mit onclick-Attribut -->
+      <div class="div-2" onclick="goToIndex()">StudiFace</div>
+      <div class="div-3">
+        <div class="div-4">
+          <div class="div-5">Wie lautet der Name des Studenten?</div>
+          <!-- Text input für den Namen -->
+          <input type="text" id="student-name" aria-label="Student Name" class="input" name="name" />
+          <div class="div-6">Füge hier das Bild ein:</div>
+          <!-- File input für das Bild -->
+          <input type="file" id="student-image" aria-label="Student Image" class="input" name="image" />
+          <!-- Button zum Bestätigen -->
+          <input type="submit" id="confirm-button" class="button" value="Bestätigen" />
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+
+      <style>
+        .div {
+          background-color: #fff;
+          display: flex;
+          padding-bottom: 50px;
+          flex-direction: column;
+        }
+        .div-2 {
+          color: #fff;
+          white-space: nowrap;
+          background-color: #438bf8;
+          width: 100%;
+          justify-content: center;
+          align-items: center;
+          padding: 55px 60px;
+          font: 400 64px Inter, sans-serif;
+          text-align: center;
+          cursor: pointer;
+        }
+        @media (max-width: 991px) {
+          .div-2 {
+            font-size: 40px;
+            white-space: initial;
+            max-width: 100%;
+            padding: 0 20px;
+          }
+        }
+        .div-3 {
+          border-radius: 20px;
+          background-color: #438bf8;
+          align-self: center;
+          display: flex;
+          width: 1268px;
+          max-width: 100%;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin: 101px 0 177px;
+          padding: 44px 60px;
+        }
+        @media (max-width: 991px) {
+          .div-3 {
+            margin: 40px 0;
+            padding: 0 20px;
+          }
+        }
+        .div-4 {
+          display: flex;
+          margin-top: 34px;
+          width: 569px;
+          max-width: 100%;
+          flex-direction: column;
+        }
+        .div-5 {
+          color: #fff;
+          text-align: center;
+          font: 400 32px Inter, sans-serif;
+        }
+        @media (max-width: 991px) {
+          .div-5 {
+            max-width: 100%;
+          }
+        }
+        .input {
+          border-radius: 20px;
+          background-color: #fff;
+          display: flex;
+          margin-top: 29px;
+          height: 73px;
+          flex-direction: column;
+        }
+        @media (max-width: 991px) {
+          .input {
+            max-width: 100%;
+          }
+        }
+        .div-6 {
+          color: #fff;
+          text-align: center;
+          align-self: center;
+          margin-top: 59px;
+          font: 400 32px Inter, sans-serif;
+        }
+        @media (max-width: 991px) {
+          .div-6 {
+            margin-top: 40px;
+          }
+        }
+        .button {
+          color: #fff;
+          text-align: center;
+          text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          align-self: center;
+          margin-top: 52px;
+          white-space: nowrap;
+          font: 400 32px Inter, sans-serif;
+          border-radius: 20px;
+          background-color: #438bf8;
+          width: 200px;
+          height: 73px;
+        }
+        @media (max-width: 991px) {
+          .button {
+            margin-top: 40px;
+            white-space: initial;
+          }
+        }
+      </style>
+      <!-- Funktion zum Anzeigen einer Meldung -->
+      <script>
+        function goToIndex() {
+          window.location.href = "index.html";
+        }
+      </script>
+</div>
+
+

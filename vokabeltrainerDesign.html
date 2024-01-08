@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<body>
+  <div class="main-container">
+    <header class="header">StudiFace</header>
+    <div class="image-wrapper">
+      <img loading="lazy" srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/b36793ff5fb824c234c77dbe6a3bfb8ad4f2cf8759d5a31adf380876e280f020?apiKey=5dd5544a011c496d99e80aa319137c60&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/b36793ff5fb824c234c77dbe6a3bfb8ad4f2cf8759d5a31adf380876e280f020?apiKey=5dd5544a011c496d99e80aa319137c60&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/b36793ff5fb824c234c77dbe6a3bfb8ad4f2cf8759d5a31adf380876e280f020?apiKey=5dd5544a011c496d99e80aa319137c60&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/b36793ff5fb824c234c77dbe6a3bfb8ad4f2cf8759d5a31adf380876e280f020?apiKey=5dd5544a011c496d99e80aa319137c60&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/b36793ff5fb824c234c77dbe6a3bfb8ad4f2cf8759d5a31adf380876e280f020?apiKey=5dd5544a011c496d99e80aa319137c60&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/b36793ff5fb824c234c77dbe6a3bfb8ad4f2cf8759d5a31adf380876e280f020?apiKey=5dd5544a011c496d99e80aa319137c60&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/b36793ff5fb824c234c77dbe6a3bfb8ad4f2cf8759d5a31adf380876e280f020?apiKey=5dd5544a011c496d99e80aa319137c60&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/b36793ff5fb824c234c77dbe6a3bfb8ad4f2cf8759d5a31adf380876e280f020?apiKey=5dd5544a011c496d99e80aa319137c60&"class="image" />
+      <button class="button">Name aufdecken</button>
+    </div>
+  </div>
+</body>
+
+<style>
+  .main-container {
+    background-color: #fff;
+    display: flex;
+    padding-bottom: 50px;
+    flex-direction: column;
+  }
+
+  .header {
+    color: #fff;
+    white-space: nowrap;
+    background-color: #438bf8;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 55px 60px;
+    font: 400 64px Inter, sans-serif;
+  }
+
+  @media (max-width: 991px) {
+    .header {
+      font-size: 40px;
+      white-space: initial;
+      max-width: 100%;
+      padding: 0 20px;
+    }
+  }
+
+  .image-wrapper {
+    border-radius: 20px;
+    background-color: #438bf8;
+    align-self: center;
+    display: flex;
+    width: 652px;
+    max-width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin: 122px 0 160px;
+    padding: 40px 61px;
+  }
+
+  @media (max-width: 991px) {
+    .image-wrapper {
+      margin: 40px 0;
+      padding: 0 20px;
+    }
+  }
+
+  .image {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 317px;
+    overflow: hidden;
+    max-width: 100%;
+  }
+
+  .button {
+    color: #fff;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    justify-content: center;
+    border-radius: 20px;
+    border: 1px solid #fff;
+    background-color: #438bf8;
+    align-self: stretch;
+    margin-top: 43px;
+    padding: 10px;
+    font: 400 64px Inter, sans-serif;
+  }
+
+  @media (max-width: 991px) {
+    .button {
+      max-width: 100%;
+      font-size: 40px;
+      margin-top: 40px;
+    }
+  }
+</style>
+
+</html>
