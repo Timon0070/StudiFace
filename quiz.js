@@ -97,18 +97,20 @@ window.onload = function() {
     });
 
     function resetQuiz() {
-    // Verstecke alle Bilder, Feedback und Next-Elemente
-    images.forEach(image => {
-        image.style.display = "none";
-    });
-    feedback.style.display = "none";
-    next.style.display = "none";
+    location.reload();
+    window.scrollTo(0,0);
+        // Verstecke alle Bilder, Feedback und Next-Elemente
+    // images.forEach(image => {
+    //     image.style.display = "none";
+    // });
+    // feedback.style.display = "none";
+    // next.style.display = "none";
 
-    // Entferne die Klassen der Bilder
-    images.forEach(image => {
-        image.classList.remove("correct");
-        image.classList.remove("wrong");
-    });
+    // // Entferne die Klassen der Bilder
+    // images.forEach(image => {
+    //     image.classList.remove("correct");
+    //     image.classList.remove("wrong");
+    // });
     }
     // Dann definierst du eine Funktion, die aufgerufen wird, wenn der Next-Button angeklickt wird
     function handleNextClick(event) {
