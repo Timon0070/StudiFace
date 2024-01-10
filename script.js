@@ -24,12 +24,23 @@ window.studenten = [
     var index = Math.floor(Math.random() * array.length);
     return array[index];
   }
-  
+
 window.onload = function() {
   document.querySelector('.stats').innerHTML = loadStatistics()
   // Load data from localStorage
   getStorage()
   document.querySelector('.stats').innerHTML = loadStatistics();
+
+  // var correctPercentage = (window.quiz.correct / window.quiz.total) * 100;
+  // document.querySelector('.bar').style.width = correctPercentage + '%';
+
+    // Check if window.quiz is defined and window.quiz.total is not 0
+    if (window.quiz && window.quiz.total !== 0) {
+      var correctPercentage = (window.quiz.correct / window.quiz.total) * 100;
+      document.querySelector('.bar').style.width = correctPercentage + '%';
+    }
+  
+    document.querySelector('.stats').innerHTML = loadStatistics();
 }
 
 // also checks existance
@@ -83,4 +94,3 @@ function loadStatistics () {
     var p = document.getElementById("name");
     p.style.display = "block";
   }
-

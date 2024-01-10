@@ -80,7 +80,16 @@ padding: 10px;
 font: 400 64px Inter, sans-serif;
 } */
 
+.bar-container {
+  width: 100%;
+  background-color: #f3f3f3;
+  border: 1px solid #bbb;
+}
 
+.bar {
+  height: 20px;
+  background-color: #4caf50;
+}
 
 .form {
 margin-top: 10px !important;
