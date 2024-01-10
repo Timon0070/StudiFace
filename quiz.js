@@ -1,15 +1,4 @@
-// window.studenten = [
-//     {name: "Bart", bild: "bart.png"},
-//     {name: "Homer", bild: "homer.png"},
-//     {name: "Maggie", bild: "maggie.png"},
-//     {name: "Marge", bild: "marge.png"},
-//     {name: "Lisa", bild: "lisa.png"},
-//   ];
-
-//  window.zufaellig = function(array) {
-//     var index = Math.floor(Math.random() * array.length);
-//     return array[index];
-//   }
+window.isRunning = true
 
 // lädt 4 zufällige studenten
 function loadRandomized(){
@@ -60,12 +49,21 @@ window.onload = function() {
 
     // Dann definierst du eine Funktion, die aufgerufen wird, wenn ein Bild angeklickt wird
     function handleImageClick(event) {
+        // prevent clicking images after quiz already finished
+        if (!isRunning) {
+            return
+        }
+
         // Du holst dir das angeklickte Bild und seine Antwort
         const image = event.target;
         const answer = image.dataset.answer;
 
+        getStorage()
+        quiz.total++;
+
         // Du überprüfst, ob die Antwort richtig oder falsch ist
         if (answer === "correct") {
+            quiz.correct++;
             // Wenn die Antwort richtig ist, änderst du den Rand des Bildes zu grün
             image.classList.add("correct");
             // Du zeigst das Feedback-Element mit einer positiven Nachricht an
@@ -80,7 +78,8 @@ window.onload = function() {
             feedbackText.textContent = "Falsch!";
             feedback.style.display = "block";
         }
-
+        isRunning = false
+        setStorage()
     
         // Du deaktivierst die Klickbarkeit aller Bilder, damit der Benutzer nicht mehrmals klicken kann
     // images.forEach(image => {

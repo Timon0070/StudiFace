@@ -1,3 +1,17 @@
+// structs für statistiken
+if (typeof window.quiz === 'undefined'){
+  window.quiz = {
+    correct: 0,
+    total: 0
+  }  
+}
+
+// unused
+// window.vokabeltrainer = {
+//   correct: 0,
+//   total: 0   
+// }
+
 window.studenten = [
     {name: "Bart", bild: "bart.png"},
     {name: "Homer", bild: "homer.png"},
@@ -11,6 +25,28 @@ window.studenten = [
     return array[index];
   }
   
+window.onload = function() {
+  document.querySelector('.stats').innerHTML = loadStatistics()
+  // Load data from localStorage
+  getStorage()
+  document.querySelector('.stats').innerHTML = loadStatistics();
+}
+
+// also checks existance
+function getStorage() {
+  if(localStorage.getItem('quiz')) {
+    window.quiz = JSON.parse(localStorage.getItem('quiz'));
+  }
+}
+
+function setStorage() {
+  localStorage.setItem('quiz', JSON.stringify(window.quiz));
+}
+
+function loadStatistics () {
+  return `Statistiken: Quiz: ${quiz.correct}/${quiz.total} Antworten korrekt`;
+}
+
   function bildWechseln() {
     var student = zufaellig(studenten);
     var img = document.getElementById("bild");
