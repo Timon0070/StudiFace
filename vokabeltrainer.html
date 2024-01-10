@@ -5,11 +5,11 @@
         <title>StudiFace</title>
         <script src="script.js"></script> <!-- Die Datei, in der du das Array und die Funktionen definiert hast -->
       </head>
-      <body>
+      <body onload="bildWechseln()">
         <div class="main-container">
           <header class="header" onclick="goToIndex()">StudiFace</header>
           <div class="image-wrapper">
-            <img id="bild" src="img/marge.png" alt="Bild eines Studenten" onload="bildWechseln()"> <!-- Die Funktion wird aufgerufen, wenn die Seite geladen wird -->
+            <img id="bild" src="img/marge.png" alt="Bild eines Studenten"> <!-- Die Funktion wird aufgerufen, wenn die Seite geladen wird -->
             <div class="name-wrapper">
               <button id="button" onclick="nameAnzeigen()">Name aufdecken</button> <!-- Die Funktion wird aufgerufen, wenn der Knopf geklickt wird -->
               <p id="name"></p>

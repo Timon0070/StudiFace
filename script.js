@@ -15,8 +15,8 @@ window.studenten = [
     // Wähle ein zufälliges Student:in-Objekt aus
     var student = zufaellig(studenten);
     // Ersetze das Bild in dem img-Element
-    //var img = document.getElementById("bild");
-   // img.src = student.bild;
+    var img = document.getElementById("bild");
+    img.src = "img/" + student.bild;
     // Speichere den Namen in dem p-Element
     var p = document.getElementById("name");
     p.textContent = student.name;
