@@ -26,10 +26,9 @@ window.studenten = [
   }
 
 window.onload = function() {
-  document.querySelector('.stats').innerHTML = loadStatistics()
   // Load data from localStorage
   getStorage()
-  document.querySelector('.stats').innerHTML = loadStatistics();
+  document.querySelector('.stats').innerHTML += loadStatistics();
 
   // var correctPercentage = (window.quiz.correct / window.quiz.total) * 100;
   // document.querySelector('.bar').style.width = correctPercentage + '%';
@@ -40,7 +39,6 @@ window.onload = function() {
       document.querySelector('.bar').style.width = correctPercentage + '%';
     }
   
-    document.querySelector('.stats').innerHTML = loadStatistics();
 }
 
 // also checks existance
@@ -55,7 +53,7 @@ function setStorage() {
 }
 
 function loadStatistics () {
-  return `Statistiken: Quiz: ${quiz.correct}/${quiz.total} Antworten korrekt`;
+  return `Quiz: ${quiz.correct}/${quiz.total} Antworten korrekt`;
 }
 
   function bildWechseln() {
