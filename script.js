@@ -1,4 +1,4 @@
-var studenten = [
+window.studenten = [
     {name: "Bart", bild: "bart.png"},
     {name: "Homer", bild: "homer.png"},
     {name: "Maggie", bild: "maggie.png"},
@@ -6,7 +6,7 @@ var studenten = [
     {name: "Lisa", bild: "lisa.png"},
   ];
 
-  function zufaellig(array) {
+ window.zufaellig = function(array) {
     var index = Math.floor(Math.random() * array.length);
     return array[index];
   }
@@ -39,7 +39,7 @@ var studenten = [
     window.location.href = "vokabeltrainer.html";
   }
 
- function goToQuiz()
+  function goToQuiz()
   {
     window.location.href = "quiz.html";
   }
@@ -49,3 +49,4 @@ var studenten = [
     var p = document.getElementById("name");
     p.style.display = "block";
   }
+

@@ -82,26 +82,14 @@
     </style>
 </head>
 <body>
-    <script src="script.js"></script>
     <h1 onclick="goToIndex()">StudiFace</h1>
     <div class="container">
-        <div class="question">
-            <p>Wie sieht Homer aus?</p>
-        </div>
-        <div class="images">
-            <div class="image">
-                <img src="lisa.png" alt="Lisa" data-answer="wrong">
-            </div>
-            <div class="image">
-                <img src="homer.png" alt="Homer" data-answer="correct">
-            </div>
-            <div class="image">
-                <img src="maggie.png" alt="Maggie" data-answer="wrong">
-            </div>
-            <div class="image">
-                <img src="bart.png" alt="Bart" data-answer="wrong">
-            </div>
-        </div>
+    
+        <!-- erst script, dann quiz includen -->
+    <script src="script.js"></script>
+    <script src="quiz.js"></script>
+    
+    <script> document.querySelector('.container').innerHTML = loadRandomized()</script>
         <div class="feedback">
             <p></p>
         </div>
@@ -109,78 +97,5 @@
             <button>Weiter</button>
         </div>
     </div>
-    <script>
-        // Hier kannst du den JavaScript-Code für die Logik deines Quiz schreiben
-        // Zuerst holst du dir die Referenzen zu den HTML-Elementen, die du brauchst
-        const images = document.querySelectorAll(".image img"); // Alle Bilder
-        images[0].src = "img/lisa.png";
-        images[1].src = "img/homer.png";
-        images[2].src = "img/maggie.png";
-        images[3].src = "img/bart.png";
-        const feedback = document.querySelector(".feedback"); // Das Feedback-Element
-        const feedbackText = document.querySelector(".feedback p"); // Der Text im Feedback-Element
-        const next = document.querySelector(".next"); // Das Next-Element
-        const nextButton = document.querySelector(".next button"); // Der Button im Next-Element
-
-        // Dann definierst du eine Funktion, die aufgerufen wird, wenn ein Bild angeklickt wird
-        function handleImageClick(event) {
-            // Du holst dir das angeklickte Bild und seine Antwort
-            const image = event.target;
-            const answer = image.dataset.answer;
-
-            // Du überprüfst, ob die Antwort richtig oder falsch ist
-            if (answer === "correct") {
-                // Wenn die Antwort richtig ist, änderst du den Rand des Bildes zu grün
-                image.classList.add("correct");
-                // Du zeigst das Feedback-Element mit einer positiven Nachricht an
-                feedback.classList.add("correct");
-                feedbackText.textContent = "Richtig!";
-                feedback.style.display = "block";
-            } else {
-                // Wenn die Antwort falsch ist, änderst du den Rand des Bildes zu rot
-                image.classList.add("wrong");
-                // Du zeigst das Feedback-Element mit einer negativen Nachricht an
-                feedback.classList.add("wrong");
-                feedbackText.textContent = "Falsch!";
-                feedback.style.display = "block";
-            }
-
-           
-            // Du deaktivierst die Klickbarkeit aller Bilder, damit der Benutzer nicht mehrmals klicken kann
-           // images.forEach(image => {
-           //     image.style.pointerEvents = "none";
-           // });
-
-            // Du zeigst das Next-Element an, damit der Benutzer zum nächsten Quiz weitergehen kann
-            next.style.display = "block";
-        }
-
-        // Dann fügst du einen Event-Listener für jedes Bild hinzu, der die Funktion aufruft, wenn das Bild angeklickt wird
-        images.forEach(image => {
-            image.addEventListener("click", handleImageClick);
-        });
-
-        function resetQuiz() {
-        // Verstecke alle Bilder, Feedback und Next-Elemente
-        images.forEach(image => {
-            image.style.display = "none";
-        });
-        feedback.style.display = "none";
-        next.style.display = "none";
-
-        // Entferne die Klassen der Bilder
-        images.forEach(image => {
-            image.classList.remove("correct");
-            image.classList.remove("wrong");
-        });
-}
-        // Dann definierst du eine Funktion, die aufgerufen wird, wenn der Next-Button angeklickt wird
-        function handleNextClick(event) {
-            resetQuiz();
-        }
-
-        // Dann fügst du einen Event-Listener für den Next-Button hinzu, der die Funktion aufruft, wenn der Button angeklickt wird
-        nextButton.addEventListener("click", handleNextClick);
-    </script>
 </body>
 </html>
