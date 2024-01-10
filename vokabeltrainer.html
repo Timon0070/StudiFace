@@ -1,103 +1,20 @@
-
-
 <html>
     <head>
         <title>StudiFace</title>
-        <script src="script.js"></script> <!-- Die Datei, in der du das Array und die Funktionen definiert hast -->
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="style.css">
       </head>
       <body onload="bildWechseln()">
         <div class="main-container">
           <header class="header" onclick="goToIndex()">StudiFace</header>
           <div class="image-wrapper">
-            <img id="bild" src="img/marge.png" alt="Bild eines Studenten"> <!-- Die Funktion wird aufgerufen, wenn die Seite geladen wird -->
+            <img id="bild" src="img/marge.png" alt="Bild eines Studenten"> 
             <div class="name-wrapper">
-              <button id="button" onclick="nameAnzeigen()">Name aufdecken</button> <!-- Die Funktion wird aufgerufen, wenn der Knopf geklickt wird -->
+              <button id="button" class="vokabel-button" onclick="nameAnzeigen()">Aufdecken</button> 
               <p id="name"></p>
-              <button onclick="bildWechseln()">Neues Bild und Name</button> <!-- Die Funktion wird aufgerufen, wenn der Knopf geklickt wird -->
+              <button class="vokabel-button" onclick="bildWechseln()">Nächster</button> 
             </div>
           </div>
         </div>
       </body>
 </html>
-
-  
-  <style>
-    .main-container {
-      background-color: #fff;
-      display: flex;
-      padding-bottom: 50px;
-      flex-direction: column;
-    }
-  
-    .header {
-      color: #fff;
-      white-space: nowrap;
-      background-color: #438bf8;
-      width: 100%;
-      justify-content: center;
-      align-items: center;
-      padding: 55px 60px;
-      font: 400 64px Inter, sans-serif;
-      text-align: center;
-      cursor: pointer;
-    }
-  
-    @media (max-width: 991px) {
-      .header {
-        font-size: 40px;
-        white-space: initial;
-        max-width: 100%;
-        padding: 0 20px;
-      }
-    }
-  
-    .image-wrapper {
-      border-radius: 20px;
-      background-color: #438bf8;
-      align-self: center;
-      display: flex;
-      width: 652px;
-      max-width: 100%;
-      flex-direction: column;
-      align-items: center;
-      margin: 122px 0 160px;
-      padding: 40px 61px;
-    }
-  
-    @media (max-width: 991px) {
-      .image-wrapper {
-        margin: 40px 0;
-        padding: 0 20px;
-      }
-    }
-  
-    .image {
-      aspect-ratio: 1;
-      object-fit: contain;
-      object-position: center;
-      width: 317px;
-      overflow: hidden;
-      max-width: 100%;
-    }
-  
-    .name-wrapper {
-      color: #fff;
-      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-      justify-content: center;
-      border-radius: 20px;
-      border: 1px solid #fff;
-      background-color: #438bf8;
-      align-self: stretch;
-      margin-top: 43px;
-      padding: 10px;
-      font: 400 64px Inter, sans-serif;
-    }
-  
-    @media (max-width: 991px) {
-      .name-wrapper {
-        max-width: 100%;
-        font-size: 40px;
-        margin-top: 40px;
-      }
-    }
-  </style>

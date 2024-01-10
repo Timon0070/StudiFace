@@ -1,8 +1,8 @@
 <html>
-    <html>
     <head>
+      <link rel="stylesheet" href="style.css">
+      <script src="script.js"></script>
         <title>StudiFace</title>
-        <script src="script.js"></script> <!-- Die Datei, in der du das Array und die Funktionen definiert hast -->
       </head>
       <body>
         <div class="main-container">
@@ -17,126 +17,6 @@
           </div>
         </div>
       </body>
+</html>  
 
-  
-  <style>
-    .main-container {
-      background-color: #fff;
-      display: flex;
-      padding-bottom: 50px;
-      flex-direction: column;
-    }
-  
-    .header {
-      color: #fff;
-      white-space: nowrap;
-      background-color: #438bf8;
-      width: 100%;
-      justify-content: center;
-      align-items: center;
-      padding: 55px 60px;
-      font: 400 64px Inter, sans-serif;
-      text-align: center;
-      cursor: pointer;
-    }
-  
-    @media (max-width: 991px) {
-      .header {
-        font-size: 40px;
-        white-space: initial;
-        max-width: 100%;
-        padding: 0 20px;
-      }
-    }
-  
-    .image-wrapper {
-      border-radius: 20px;
-      background-color: #438bf8;
-      align-self: center;
-      display: flex;
-      width: 652px;
-      max-width: 100%;
-      flex-direction: column;
-      align-items: center;
-      margin: 122px 0 160px;
-      padding: 40px 61px;
-    }
-  
-    @media (max-width: 991px) {
-      .image-wrapper {
-        margin: 40px 0;
-        padding: 0 20px;
-      }
-    }
-  
-    .image {
-      aspect-ratio: 1;
-      object-fit: contain;
-      object-position: center;
-      width: 317px;
-      overflow: hidden;
-      max-width: 100%;
-    }
-  
-    .name-wrapper {
-      color: #fff;
-      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-      justify-content: center;
-      border-radius: 20px;
-      border: 1px solid #fff;
-      background-color: #438bf8;
-      align-self: stretch;
-      margin-top: 43px;
-      padding: 10px;
-      font: 400 64px Inter, sans-serif;
-    }
-  
-    @media (max-width: 991px) {
-      .name-wrapper {
-        max-width: 100%;
-        font-size: 40px;
-        margin-top: 40px;
-      }
-    }
-  </style>
-
-  <script>
-
-// Das Array mit den Namen der Studenten
-var namen = ["Marge", "Homer", "Lisa", "Bart", "Maggie"];
-
-// Das Array mit den Bildern der Studenten
-var bilder = ["img/marge.png", "img/homer.png", "img/lisa.png", "img/bart.png", "img/maggie.png"];
-
-// Die Variable, die den aktuellen Index speichert
-var aktuellerIndex = 0;
-
-// Die Funktion, die den Namen zum aktuellen Index zurückgibt
-function nameZufaellig() {
-  return namen[aktuellerIndex];
-}
-
-// Die Funktion, die den Namen anzeigt
-function nameAnzeigen() {
-  var name = nameZufaellig();
-  document.getElementById("name").innerHTML = name;
-}
-
-// Die Funktion, die ein neues Bild zum nächsten Index anzeigt
-function bildWechseln() {
-  aktuellerIndex++;
-  if (aktuellerIndex >= bilder.length) {
-    aktuellerIndex = 0;
-  }
-  document.getElementById("bild").src = bilder[aktuellerIndex];
-}
-
-// Die Funktion, die zur Startseite zurückkehrt
-function goToIndex() {
-  window.location.href = "index.html";
-}
-
-  </script>
-
-  </html>
 

@@ -1,0 +1,433 @@
+.main-container {
+background-color: #fff;
+display: flex;
+padding-bottom: 50px;
+flex-direction: column;
+}
+
+.header, h1 {
+color: #fff;
+white-space: nowrap;
+background-color: #438bf8;
+width: 100%;
+justify-content: center;
+align-items: center;
+padding: 55px 60px;
+font: 400 56px Inter, sans-serif; 
+text-align: center;
+cursor: pointer;
+box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+transition: background-color 0.3s ease;
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+margin-bottom: 20px !important;
+}
+
+.header:hover {
+background-color: #5a9ff4;
+}
+
+@media (max-width: 991px) {
+.header {
+  font-size: 40px;
+  white-space: initial;
+  max-width: 100%;
+  padding: 0 20px;
+}
+}
+/* Vokabeltrainer große blaue Box */
+.image-wrapper {
+margin-top: 10px !important;
+border-radius: 20px;
+background-color: #438bf8;
+align-self: center;
+display: flex;
+width: 652px;
+max-width: 100%;
+flex-direction: column;
+align-items: center;
+margin: 122px 0 160px;
+padding: 40px 61px;
+box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 991px) {
+.image-wrapper {
+  margin: 40px 0;
+  padding: 0 20px;
+}
+}
+
+.image {
+aspect-ratio: 1;
+object-fit: contain;
+object-position: center;
+width: 317px;
+overflow: hidden;
+max-width: 100%;
+}
+
+/* die kleine Box im Vokabeltrainer, kann eig raus
+.name-wrapper {
+color: #fff;
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+justify-content: center;
+border-radius: 20px;
+border: 1px solid #fff;
+background-color: #438bf8;
+align-self: stretch;
+margin-top: 43px;
+padding: 10px;
+font: 400 64px Inter, sans-serif;
+} */
+
+
+
+.form {
+margin-top: 10px !important;
+border-radius: 20px;
+background-color: #438bf8;
+align-self: center;
+display: flex;
+width: 900px;
+max-width: 100%;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin: 101px 0 177px;
+padding: 44px 60px;
+box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 991px) {
+.form {
+  margin: 40px 0;
+  padding: 0 20px;
+}
+}
+
+.form-content {
+display: flex;
+margin-top: 34px;
+width: 569px;
+max-width: 100%;
+flex-direction: column;
+}
+
+.form-title {
+color: #fff;
+text-align: center;
+font: 400 32px Inter, sans-serif;
+text-shadow: #000 0px 0px 2px;
+}
+
+@media (max-width: 991px) {
+.form-title {
+  max-width: 100%;
+}
+}
+
+.text-input {
+border-radius: 20px;
+background-color: #fff;
+display: flex;
+margin-top: 29px;
+height: 73px;
+flex-direction: column;
+transition: background-color 0.3s ease;
+font-size: 30px;
+outline: 0 0 30px #ffffff;
+margin-top: 10px !important;
+}
+
+.text-input:hover {
+background-color: #d3d3d3;
+}
+
+@media (max-width: 991px) {
+.text-input {
+  max-width: 100%;
+}
+}
+
+.form-subtitle {
+color: #fff;
+text-align: center;
+align-self: center;
+margin-top: 59px;
+font: 400 32px Inter, sans-serif;
+text-shadow: #000 0px 0px 2px;
+}
+
+@media (max-width: 991px) {
+.form-subtitle {
+  margin-top: 40px;
+}
+}
+
+.file-input {
+border-radius: 20px;
+background-color: #fff;
+display: flex;
+margin-top: 59px;
+height: 73px;
+flex-direction: column;
+transition: background-color 0.3s ease;
+font-size: 25px; 
+margin-top: 10px !important;
+cursor: pointer;
+}
+.file-input:hover {
+background-color: #d3d3d3; 
+}
+
+
+@media (max-width: 991px) {
+.file-input {
+  margin-top: 40px;
+  max-width: 100%;
+}
+}
+
+.submit-button {
+color: #fff;
+text-align: center;
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+align-self: center;
+margin-top: 52px;
+white-space: nowrap;
+font: 400 32px Inter, sans-serif;
+border-radius: 20px;
+background-color: #438bf8;
+width: 200px;
+height: 73px;
+border: 1px solid #ffffff;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+.submit-button:hover {
+background-color: #5a9ff4; 
+}
+
+@media (max-width: 991px) {
+.submit-button {
+  margin-top: 40px;
+  white-space: initial;
+}
+}
+
+.vokabel-button {
+color: #fff;
+text-align: center;
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+align-self: center;
+margin-top: 52px;
+white-space: nowrap;
+font: 400 32px Inter, sans-serif;
+border-radius: 20px;
+background-color: #438bf8;
+width: 200px;
+height: 73px;
+border: 1px solid #ffffff;
+transition: background-color 0.3s ease;
+cursor: pointer;
+}
+.vokabel-button:hover {
+    background-color: #5a9ff4; 
+}
+
+/* Box index blau groß */
+.container {
+border-radius: 20px;
+background-color: #438bf8;
+align-self: center;
+display: flex;
+width: 1100px !important;
+width: 1268px;
+max-width: 100%;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin: 144px 0 143px;
+padding: 45px 60px;
+}
+@media (max-width: 991px) {
+.container {
+  margin: 40px 0;
+  padding: 0 20px;
+}
+}
+.inner-container {
+display: flex;
+width: 1025px;
+max-width: 100%;
+flex-direction: column;
+margin: 52px 0 55px;
+}
+@media (max-width: 991px) {
+.inner-container {
+  margin: 40px 0;
+}
+}
+.row {
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 20px;
+}
+@media (max-width: 991px) {
+.row {
+  max-width: 100%;
+  flex-wrap: wrap;
+}
+}
+.title {
+color: #fff;
+flex-grow: 1;
+flex-basis: auto;
+margin: auto 0;
+font: 400 40px Inter, sans-serif;
+text-align: center;
+text-shadow: #000 0px 0px 3px;
+}
+@media (max-width: 991px) {
+.title {
+  max-width: 100%;
+}
+}
+.buttonArrow {
+white-space: nowrap;
+border-radius: 20px;
+background-color: #fff;
+align-self: stretch;
+justify-content: center;
+align-items: center;
+width: 50px; 
+height: 50px; 
+padding: 12px 30px; 
+font: 400 40px Inter, sans-serif;
+background-image: url("img/rechterPfeil.png"); 
+background-size: contain; 
+background-repeat: no-repeat; 
+background-position: center; 
+transition: background-color 0.3s ease;
+}
+.buttonArrow:hover {
+background-color: #D3D3D3; 
+}
+
+@media (max-width: 991px) {
+.buttonArrow {
+  white-space: initial;
+  padding: 0 20px 0 22px;
+}
+}
+.form-group {
+display: flex;
+margin-top: 42px;
+align-items: center;
+justify-content: space-between;
+gap: 20px;
+}
+@media (max-width: 991px) {
+.form-group {
+  max-width: 100%;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+}
+.input-label {
+color: #fff;
+flex-grow: 1;
+flex-basis: auto;
+margin: auto 0;
+font: 400 40px Inter, sans-serif;
+text-align: center;
+}
+@media (max-width: 991px) {
+.input-label {
+  max-width: 100%;
+}
+}
+.input-field {
+color: #000;
+white-space: nowrap;
+border-radius: 20px;
+background-color: #fff;
+align-self: stretch;
+justify-content: center;
+align-items: start;
+padding: 24px 60px;
+font: 400 40px Inter, sans-serif;
+}
+@media (max-width: 991px) {
+.input-field {
+  white-space: initial;
+  padding: 0 20px 0 22px;
+}
+}
+
+body {
+font-family: Arial, sans-serif;
+}
+
+
+.container {
+width: 80%;
+margin: 0 auto;
+}
+
+.question {
+margin: 20px 0;
+}
+
+.images {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+
+.image {
+width: 24%;
+margin: 10px 0;
+}
+
+.image img {
+width: 100%;
+height: auto;
+border: 3px solid black;
+cursor: pointer;
+}
+
+.image img.correct {
+border-color: rgb(18, 190, 18);
+}
+
+.image img.wrong {
+border-color: red;
+}
+
+.feedback {
+display: none;
+text-align: center;
+font-weight: bold;
+color: white;
+}
+
+.feedback.correct {
+background-color: rgb(18, 190, 18);
+}
+
+.feedback.wrong {
+background-color: red;
+}
+
+.next {
+display: none;
+text-align: center;
+}
+
+.next button {
+padding: 10px 20px;
+font-size: 20px;
+cursor: pointer;
+}
